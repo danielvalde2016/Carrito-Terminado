@@ -18,6 +18,8 @@
     }
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,14 +42,50 @@
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" media="screen"/>
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <style>
-
+.descripcion {
+border-radius: 0px 64px 0px 87px;
+-moz-border-radius: 0px 64px 0px 87px;
+-webkit-border-radius: 0px 64px 0px 87px;
+border: 5px solid #000000;
+width:460px;
+height:280px;
+float:right;
+color: black;
+background-color: #EDFDFC;
+}
+.imagen {
+border: 5px solid #000000;
+width:460px;
+height:280px;
+float:right;
+}
+ul{
+       list-style:none;
+       color: white;
+       size: 20px;
+       padding: 10px;
+       }
+.titulo {
+    color: #FF683B;
+    font-size: 20px;
+}
+.caracteristicas {
+    font-size: 26px;
+}
+.datos { 
+    font-size: 20px;
+}
+.divdatos {
+    margin-top: 290px;
+}
 </style>
+
 <body>
     <header class="header mb-5">
         <nav class="navbar navbar-expand-lg">
@@ -157,69 +195,23 @@
                     <!-- *** MENUS AND FILTERS END ***-->
 </div>
 
+<div style="width:1000px; padding:3px;">
+<h1 style="color: white;"><?php echo $data['nombre'];?></h1>
+<div style=" width:460px; float:left;"><img class="imagen" src=<?php echo $data['imagen'];?> width="460px" height="280px"></div>
+<div class="descripcion" style="margin-right: 50px";><h3 style="margin: 20px;">Descripción</h3>
+<p style="color: black; margin: 20px;"><?php echo $data['descripcion'];?></p><br></div>
+</div>
 
-<h1 style="color: #8B0000;"><?php echo $data['nombre'];?></h1>
-<img src=<?php echo $data['imagen'];?> width="460px" height="280px">
-<br><h3 style="color: white;">Descripción</h3>
-<p style="color: white;"><?php echo $data['descripcion'];?></p>
+<div class="divdatos">
 
-<div class="tablajuegos">
-<table  align="center" width="*%" border=1 frame="box" rules="all" cellspacing=1 cellpadding=1>
+<ul>
+    <strong class="caracteristicas">ACERCA DE ESTE CONTENIDO</strong>
+    <li class="datos"><strong class="titulo">Nombre: </strong><?php echo $data['nombre'];?></li>
+    <li class="datos"><strong class="titulo">Género: </strong><?php echo $data['categoria'];?></li>
+    <li class="datos"><strong class="titulo">Precio: </strong><?php echo $data['precio'];?>€</li>
 
-    
-    <table width="70%" align="center">
+</ul>
+</div>
 
-
-                    <div class="col-12">
-                        <div class="container color">
-                                <div class="form-horizontal" >
-                                    <div class="control-group">
-                                        <label class="control-label">Nombre:</label>
-                                        
-                                            <label class="checkbox">
-                                                <?php echo $data['nombre'];?>
-                                            </label>
-                                        
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Precio:</label>
-                                        
-                                            <label class="checkbox">
-                                                <?php echo $data['precio'];?>€
-                                            </label>
-                                        
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Categoria:</label>
-                                        
-                                            <label class="checkbox">
-                                                <?php echo $data['categoria'];?>
-                                            </label>
-                                        
-                                    </div>
-                                    
-                                        <label class="control-label">Clave:</label>
-                                        
-                                            <label class="checkbox">
-                                                <?php echo $data['clavejuego'];?>
-                                            </label>
-                                        
-                                    
-                                    <div class="form-actions">
-                                        <a class="btn" href="juegos.php">Atras</a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                        </div> <!-- /container -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</table>
-</table>
   </body>
 </html>
