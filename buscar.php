@@ -149,21 +149,14 @@
 <div><a class="btn" href="readgame.php?id=<?php echo $buscame[$i]['idjuego'] ?>">
     <table width="70%" align="center">
 
-    <tr align="center">
-        <td style="color: red;">Imagen</td>
-        <td style="color: red;">Nombre</td>
-        
-        <td style="color: red;">Precio</td>
-        
-        
-    </tr>
+
 
 
             <tr>
-              <td style="text-align: center; color: #8B0000;"><img src=<?php echo $buscame[$i]["imagen"]?> width="170px" height="110"></td>
-                <td style="text-align: center; color: #8B0000;"><?php echo $buscame[$i]["nombre"] ?></a></td>
+              <td style="text-align: center; color: #8B0000;"><img style="border-radius: 20px;" src=<?php echo $buscame[$i]["imagen"]?> width="170px" height="110"></td>
+                <td style="color: #E22A03; font-size: 20px;">&nbsp;&nbsp;<?php echo $buscame[$i]["nombre"] ?></a></td>
                 
-                <td style="text-align: center; color: #8B0000;"><?php echo $buscame[$i]["precio"] ?>€</td>
+
                 
                 
             </tr></a>
